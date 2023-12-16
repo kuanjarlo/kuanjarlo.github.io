@@ -112,7 +112,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const addCartToHTML = () => {
       console.log('adds items to cart');
       ListCartHTML.innerHTML = '';
+      console.log('before calc func');
       calculateTotalAmount();
+      console.log('after calc func');
       if (carts.length > 0) {
         carts.forEach(cart => {
           let product = ListProducts.find(p => p.id == cart.product_id);
