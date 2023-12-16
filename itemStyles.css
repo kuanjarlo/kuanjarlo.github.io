@@ -1,0 +1,867 @@
+body {
+    background-color: rgb(230, 230, 230);
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 20px;
+    padding-left: 20px;
+  
+}
+
+
+header .navbar {
+  position: relative;
+}
+
+header .navbar span {
+  color: rgb(235, 235, 235);
+  position: absolute;
+  top: 2px;
+  right: 115px;
+
+}
+
+.fa-bag-shopping {
+  font-size: 30px; /* Adjust the font size as needed */
+}
+
+.reviews {
+  display: flex;
+  margin-left: 260px;
+  max-width: 1390px;
+}
+
+.review-grid {
+  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  color: red;
+  margin-left: 220px;
+  width: 1500px;
+  padding-bottom: 200px;
+}
+
+.removeBTN {
+  margin-left: 20px;
+  font-weight: 420;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.removeBTN:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 0.2px;
+  cursor: pointer;
+}
+
+.item1 {
+  margin-top: 20px;
+}
+
+.item2 {
+  margin-top: 20px;
+  margin-left: 90px;
+}
+
+.summary {
+  display: flex;
+  max-width: 2000px;
+}
+
+.summary-text {
+  margin-left: 40px;
+  padding-right: 800px;
+}
+
+.reviewBtn {
+  border: 1;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 900px;
+  font-family: Montserrat;
+}
+
+.minimal-header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.minimal-header button {
+  margin-left: 20px;
+}
+
+.cartTab {
+  color: rgb(49, 49, 49);
+  font-family: Montserrat;
+  background-color: rgb(231, 231, 231);
+  width: 600px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 0;
+  display: grid;
+  right: -1000px;
+  grid-template-rows: 70px 1fr 150px;
+  transition: 0.5s;
+  box-shadow: #f36666;
+ 
+
+  z-index: 20;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity and color as needed */
+  opacity: 0;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  transition: opacity 250ms ease-in-out;
+  pointer-events: none;
+}
+
+.overlay.addOverlay {
+  opacity: 0.5;
+  z-index: 2;
+  transition: opacity 250ms ease-in-out;
+  pointer-events: auto;
+}
+
+body.showCart .overlay {
+  opacity: 0.5;
+  z-index: 2;
+  transition: opacity 250ms ease-in-out;
+}
+
+.sideIcons {
+  display: flex;
+}
+
+.icon-cart i {
+  cursor: pointer;
+  margin-left: 20px;
+  color: rgb(231, 231, 231);
+}
+
+.accountIcon i {
+  cursor: pointer;
+  font-size: 30px;
+  color: rgb(231, 231, 231);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 200px;
+  transform: translate(-50%, -50%);
+  background-color: #f36666;
+  z-index: 2;
+}
+
+.cartTab {
+  color: rgb(49, 49, 49);
+  font-family: Montserrat;
+  background-color: rgb(231, 231, 231);
+  width: 600px;
+  position: fixed;
+  top: 0;
+  right: -600px; /* Change this to -600px */
+  bottom: 0;
+  margin-top: 0;
+  display: grid;
+  grid-template-rows: 70px 1fr 150px;
+  transition: 0.5s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.cartTab h1 {
+  margin-left: 30px;
+}
+
+.cartTab .chkBtn {
+  display: block;
+}
+
+.totalSection {
+  padding: 0;
+  margin: 0;
+  margin-left: 20px;
+}
+
+body.showCart .cartTab {
+  right: 0; /* Show when body has the showCart class */
+}
+
+.Cartheader {
+  display: flex;
+}
+
+.Cartheader i {
+  margin-top: 1px;
+  margin-left: 380px;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+/* Start of checkout */
+
+.cartList .item img {
+  width: 200px
+}
+
+.cartList .item {
+  display: flex;
+}
+
+.itemInfo h1 {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.qtySelctor {
+  margin-top: 20px;
+  display: flex;
+  align-self: start;
+  border-width: 20px;
+}
+
+.qtySelctor ul {
+  padding: 10px;
+}
+
+.cartList {
+  overflow: auto;
+}
+
+.cartList::-webkit-scrollbar{
+  width: 2;
+}
+
+.itemInfo {
+  align-items: center;
+  margin-top: 20px;
+  max-height: 200px;
+  justify-items: center;
+}
+
+.image {
+  margin: 20px;
+}
+
+.totalPrice {
+  margin: 20px;
+  margin-left: 250px;
+  margin-top: 100px;
+}
+
+.cartList hr {
+  margin: 0;
+}
+
+.chkBtn button {
+  width: 500px;
+  height: 55px;
+  display: auto;
+  cursor: pointer;
+  margin-bottom: 20px;
+  background-color: rgb(24, 24, 24);
+}
+
+.chkBtn .chkText {
+  margin-left: 5px;
+  margin-top: 10px;
+  font-family: Montserrat;
+  font-size: 25px;
+  color: rgb(231, 231, 231);
+}
+
+.chkBtn .separator {
+  margin-left: 35px;
+  margin-top: 10px;
+  font-family: Montserrat;
+  font-size: 25px;
+  color: rgb(231, 231, 231);
+}
+
+.chkBtn .price {
+  margin-left: 40px;
+  margin-top: 10px;
+  font-family: Montserrat;
+  font-size: 25px;
+  color: rgb(231, 231, 231);
+}
+
+.chkBtn {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 25px;
+}
+
+.cartFooter {
+  background-color: rgb(231, 231, 231);
+  padding: 0;
+}
+
+button.minus {
+  background: rgb(75, 75, 75);
+  color: white;
+  border: 0;
+  max-width: 600px;
+  max-height: 30px;
+  padding-right: 10px;
+  padding-left: 13.1px;
+  margin-top: 20px;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  /* Add any other styles you want */
+}
+
+button.add {
+  background: rgb(75, 75, 75);
+  color: white;
+  border: 0;
+  max-width: 600px;
+  max-height: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 20px;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  /* Add any other styles you want */
+}
+
+header .navbar span {
+  color: rgb(235, 235, 235);
+  position: absolute;
+  top: 2px;
+  right: 115px;
+
+}
+
+.cartFooter hr {
+  margin-top: 0px;
+ border-color: rgb(48, 48, 48);
+ opacity: 20%;
+}
+
+.navbar ul, .navbar li {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.navbar ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+}
+
+.navbar li {
+    float: left;
+    position: relative;
+    width: auto;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-family: Montserrat;
+    color: white;
+    margin-left: 40px;
+    opacity: 75%;
+    transition: opacity ease 250ms;
+    display:inline-block;
+}
+
+.navbar a:hover {
+    opacity: 1;
+}
+
+/* Start of Dropdown menu */
+
+/* Initially hide the dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Show the dropdown content when hovering over the parent element */
+.drop-down:hover .dropdown-content {
+  display: block;
+}
+
+/* Links inside the dropdown */
+.dropdown-content dc {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content dc:hover {
+  background-color: #ddd;
+}
+
+dc {
+  font-family: Montserrat;
+  padding: 50px;  
+ 
+}
+
+/* End of Dropdown menu */
+
+#forHim_submenu {
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 35px;
+    visibility: hidden;
+    z-index: 1;
+}
+
+li:hover ul#forHim_submenu {
+    opacity: 1;
+    top: 80px;
+    visibility: visible;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 20px;
+    background-color: rgb(48, 48, 48);
+    z-index: 1;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    
+}
+
+.small-container {
+    margin-top: 250px;
+    margin-left: 100px;
+    display: flex;
+}
+
+/* Start of image slider. */
+
+.container {
+  padding-top: 0px;
+  justify-content: center;
+}
+
+.row {
+    display: flex;
+    aspect-ratio: 6 / 9;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    border-radius: 0.5rem;
+    margin-top: 0px;
+}
+
+.row img {
+  flex: 2 0 100%;
+  scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.slider-wrapper {
+  max-width: 590px;
+  justify-content: center;
+  display: flex;
+}
+
+.slider-nav {
+  display: flex;
+  column-gap: .5rem;
+  position: absolute;
+  left: 450px;
+  transform: translateX(-50%);
+  z-index: 0;
+  margin-top: 600px;
+}
+
+.slider-nav a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 75% ;
+  transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+  opacity: 1;
+}
+
+
+/* End of image slider. */
+
+.product-info_wrapper {
+    margin-left: 200px;
+}
+
+h1 {
+    font-family: Montserrat;
+    font-weight: 505;
+    color: rgb(54, 54, 54);
+}
+
+.row {
+    margin-left: 150px;
+}
+
+p {
+    color: rgb(75, 75, 75);
+    font-family: Montserrat;
+    letter-spacing: 4px;
+    font-size: 23px;
+}
+
+p1 {
+    color: rgb(75, 75, 75);
+    font-family: Montserrat;
+    font-size: 20px;
+}
+
+.priceHeading {
+    margin-top: 25px;
+}
+
+hr {
+    opacity: 50%;
+    margin-top: 35px;
+}
+
+.color-swatch {
+    margin-top: 25px;
+}
+
+.color-swatch_menu {
+    margin-top: 20px;
+    margin-left: 0px;
+    display: flex;
+}
+
+.grayBox {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(161, 161, 161);
+    border: 1px solid rgba(128, 128, 128, 0); /* Transparent border with RGBA color */
+    transition: border 250ms ease-in-out; /* Transition the border property */
+}
+
+.grayBox:hover {
+    border: 1px solid rgb(94, 94, 94); /* Solid gray border on hover */
+    cursor: pointer;
+}
+
+.blackBox {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(22, 22, 22);
+    margin-left: 10px;
+    border: 1px solid rgba(128, 128, 128, 0); 
+    transition: border 250ms ease-in-out;
+}
+
+.black Box:hover {
+    border: 1px solid rgb(165, 165, 165); 
+    cursor: pointer;
+}
+
+.fgreenBox {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(4, 77, 4);
+    margin-left: 10px;
+    border: 1px solid rgba(128, 128, 128, 0); 
+    transition: border 250ms ease-in-out; 
+}
+
+.fgreenBox:hover {
+    border: 1px solid rgb(94, 94, 94); 
+    cursor: pointer;
+}
+
+.beigeBox {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(255, 230, 197);
+    margin-left: 10px;
+    border: 1px solid rgba(128, 128, 128, 0); 
+    transition: border 250ms ease-in-out; 
+}
+
+.beigeBox:hover {
+    border: 1px solid rgb(94, 94, 94); 
+    cursor: pointer;
+}
+
+  .whiteBox {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 10px;
+    border: 1px solid rgba(128, 128, 128, 0); 
+    transition: border 250ms ease-in-out; 
+}
+
+.whiteBox:hover {
+    border: 1px solid rgb(94, 94, 94);
+    cursor: pointer;
+}
+
+
+  .size-swatch {
+    margin-top: 35px;
+  }
+
+  .size-swatch_menu {
+    margin-top: 20px;
+    margin-left: 0px;
+    display: flex;
+  }
+
+  .small {
+    font-family: Montserrat;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 10px;
+    transition: 250ms ease-in-out;
+  }
+
+  .small:hover {
+    cursor: pointer;
+    background-color: rgb(43, 43, 43);
+    color: white;
+  }
+
+
+  .medium {
+    font-family: Montserrat;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 10px;
+    margin-left: 10px;
+    transition: 250ms ease-in-out;
+  }
+
+  .medium:hover {
+    cursor: pointer;
+    background-color: rgb(43, 43, 43);
+    color: white;
+  }
+
+  .large {
+    font-family: Montserrat;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 10px;
+    margin-left: 10px;
+    transition: 250ms ease-in-out;
+  }
+
+  .large:hover {
+    cursor: pointer;
+    background-color: rgb(43, 43, 43);
+    color: white;
+  }
+
+  .xl {
+    font-family: Montserrat;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 10px;
+    margin-left: 10px;
+    transition: 250ms ease-in-out;
+  }
+
+  .xl:hover {
+    cursor: pointer;
+    background-color: rgb(43, 43, 43);
+    color: white;
+  }
+
+  .xxl {
+    font-family: Montserrat;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 10px;
+    margin-left: 10px;
+    transition: 250ms ease-in-out;
+  }
+
+  .xxl:hover {
+    cursor: pointer;
+    background-color: rgb(43, 43, 43);
+    color: white;
+  }
+
+.add-to-cart_header {
+    margin-top: 20px;
+}
+
+  .add-to-cart {
+    font-family: Montserrat;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 10px;
+    transition: 250ms ease-in-out;
+  }
+
+  .add-to-cart:hover {
+    cursor: pointer;
+    background-color: rgb(43, 43, 43);
+    color: white;
+  }
+
+.material-breakdown_header {
+    margin-top: 35px;
+    padding-bottom: 150px;
+}
+  
+  .fragment-1 {
+    font-family: Montserrat;
+    font-size: 14px;
+    display: flex;
+    max-width: 900px;
+  }
+
+  .frag1-text {
+    display: flex;
+    max-width: 750px;
+    margin-left: 10px;
+  }
+
+  .fragment-2 {
+    font-family: Montserrat;
+    font-size: 14px;
+    margin-top: 35px;
+    display: flex;
+    max-width: 450px;
+  }
+
+  .frag2-text {
+    display: flex;
+    max-width: 750px;
+    margin-left: 10px;
+  }
+
+  .fragment-3 {
+    font-family: Montserrat;
+    font-size: 14px;
+    margin-top: 35px;
+    display: flex;
+    max-width: 900px;
+  }
+
+  .frag3-text {
+    display: flex;
+    max-width: 750px;
+    margin-left: 10px;
+    line-height: 22px;
+  }
+
+  .fragment-4 {
+    font-family: Montserrat;
+    font-size: 14px;
+    margin-top: 30px;
+    display: flex;
+    max-width: 2000px;
+  }
+
+  .frag4-text {
+    display: flex;
+    max-width: 750px;
+    margin-left: 10px;
+    line-height: 22px;
+  }
+
+  .fragment-5 {
+    font-family: Montserrat;
+    font-size: 14px;
+    margin-top: 30px;
+    display: flex;
+    max-width: 2000px;
+  }
+
+  .frag5-text {
+    display: flex;
+    max-width: 750px;
+    margin-left: 10px;
+  }
+
+  .fragment-6 {
+    font-family: Montserrat;
+    font-size: 14px;
+    margin-top: 30px;
+    display: flex;
+    max-width: 2000px;
+  }
+
+  .frag6-text {
+    display: flex;
+    max-width: 840px;
+    margin-left: 10px;
+    line-height: 22px;
+    justify-content: center;
+  }
+
+  .fragment-7 {
+    font-family: Montserrat;
+    font-size: 14px;
+    margin-top: 30px;
+    display: flex;
+    max-width: 2000px;
+  }
+
+  .frag7-text {
+    display: flex;
+    max-width: 840px;
+    margin-left: 10px;
+    line-height: 22px;
+    justify-content: center;
+  }
+
+strong {
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    color: rgb(37, 37, 37);
+}

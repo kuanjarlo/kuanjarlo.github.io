@@ -1,0 +1,635 @@
+body {
+    background-color: rgb(230, 230, 230);
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+.slide {
+    transition: opacity 200ms ease-in-out;
+    transition-delay: 100ms;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    margin-top: 137px;
+    margin-left: 0px;
+    max-height: 200px;
+    display: block;
+    
+}
+
+.slide > img {
+    display: flex;
+    object-fit: cover;
+    object-position: center;
+    max-width: 1903px;
+}
+
+.slide[data-active] {
+    transition-delay: 0ms;
+    opacity: 1;
+}
+
+.carousel {
+    height: 850px;
+    position: relative;
+
+  
+}
+
+.carousel-button {
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    z-index: 1;
+    color: rgb(235, 235, 235);
+    cursor: pointer;
+}
+
+.carousel-button i {
+    font-size: 35px; /* Adjust the font size as needed */
+}
+
+.carousel-button.prev {
+    margin-top: 780px;
+    margin-left: 1740px; /* Adjust the left margin as needed */
+    opacity: 0.6;
+}
+
+.carousel-button.prev:hover {
+    transition: opacity, 50ms ease-in-out;
+    opacity: 1;
+}
+
+.carousel-button.next {
+    margin-top: 780px;
+    margin-left: 1800px; /* Adjust the left margin as needed */
+    opacity: 0.6;
+}
+
+.carousel-button.next:hover {
+    transition: opacity, 50ms ease-in-out;
+    opacity: 1;
+}
+
+header .navbar {
+    position: relative;
+}
+
+header .navbar span {
+    color: rgb(235, 235, 235);
+    position: absolute;
+    top: 2px;
+    right: 115px;
+
+}
+
+.fa-bag-shopping {
+    font-size: 30px; /* Adjust the font size as needed */
+}
+
+
+.navbar ul, .navbar li {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.navbar ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+}
+
+.navbar li {
+    float: left;
+    position: relative;
+    width: auto;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-family: Montserrat;
+    color: white;
+    margin-left: 40px;
+    opacity: 75%;
+    transition: opacity ease 250ms;
+    display:inline-block;
+}
+
+.navbar a:hover {
+    opacity: 1;
+}
+
+
+/* Start of Dropdown menu */
+
+/* Initially hide the dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    padding-bottom: 10px;
+  }
+  
+  /* Show the dropdown content when hovering over the parent element */
+  .drop-down:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content dc {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content dc:hover {
+    background-color: #ddd;
+  }
+  
+  dc {
+    font-family: Montserrat;
+    padding: 50px;  
+   
+  }
+  
+  /* End of Dropdown menu */
+
+#forHim_submenu {
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 35px;
+    visibility: hidden;
+    z-index: 1;
+}
+
+li:hover ul#forHim_submenu {
+    opacity: 1;
+    top: 80px;
+    visibility: visible;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 20px;
+    background-color: rgb(48, 48, 48);
+    z-index: 2;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    
+}
+
+section {
+    max-height: 900px;
+}
+
+.container {
+    padding-top: 200px;
+    justify-content: center;
+  }
+
+.slider-wrapper {
+    position: relative;
+    max-width: 100rem;
+    margin: 0 auto;
+  }
+  
+  .slider {
+    display: flex;
+    aspect-ratio: 25 / 10;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+    margin-top: 0px;
+  }
+  
+  .slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+  }
+  
+  .slider-nav {
+    display: flex;
+    column-gap: .5rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+  
+  .slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 75% ;
+    transition: opacity ease 250ms;
+  }
+  
+  .slider-nav a:hover {
+    opacity: 1;
+  }
+  
+
+.featured-container {
+    max-width: 1080px;
+    margin: 100px 60px 60px;
+}
+
+.col-1 {
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+}
+
+.col-1 img {
+    width: 30%;
+}
+
+.checked {
+    color: rgb(255, 191, 71);
+  }
+
+.cartTab {
+    color: rgb(49, 49, 49);
+    font-family: Montserrat;
+    background-color: rgb(231, 231, 231);
+    width: 600px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 0;
+    display: grid;
+    right: -1000px;
+    grid-template-rows: 70px 1fr 150px;
+    transition: 0.5s;
+    box-shadow: #f36666;
+   
+
+    z-index: 20;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity and color as needed */
+    opacity: 0;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    transition: opacity 250ms ease-in-out;
+    pointer-events: none;
+}
+
+.overlay.addOverlay {
+    opacity: 0.5;
+    z-index: 9;
+    transition: opacity 250ms ease-in-out;
+    pointer-events: auto;
+}
+
+body.showCart .overlay {
+    opacity: 0.5;
+    z-index: 2;
+    transition: opacity 250ms ease-in-out;
+}
+
+.sideIcons {
+    display: flex;
+}
+
+.icon-cart i {
+    cursor: pointer;
+    margin-left: 20px;
+    color: rgb(231, 231, 231);
+}
+
+.accountIcon i {
+    cursor: pointer;
+    font-size: 30px;
+    color: rgb(231, 231, 231);
+}
+
+.cartTab {
+    color: rgb(49, 49, 49);
+    font-family: Montserrat;
+    background-color: rgb(231, 231, 231);
+    width: 600px;
+    position: fixed;
+    top: 0;
+    right: -600px; /* Change this to -600px */
+    bottom: 0;
+    margin-top: 0;
+    display: grid;
+    grid-template-rows: 70px 1fr 150px;
+    transition: 0.5s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+  }
+
+.cartTab h1 {
+    margin-left: 30px;
+}
+
+.cartTab .chkBtn {
+    display: block;
+}
+
+.totalSection {
+    padding: 0;
+    margin: 0;
+    margin-left: 20px;
+}  
+
+body.showCart .cartTab {
+    right: 0; /* Show when body has the showCart class */
+}
+
+.Cartheader {
+    display: flex;
+}
+
+.Cartheader i {
+    margin-top: 1px;
+    margin-left: 380px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+/* Start of checkout */
+
+.cartList .item img {
+    width: 200px
+}
+
+.cartList .item {
+    display: flex;
+}
+
+.itemInfo h1 {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.qtySelctor {
+    margin-top: 20px;
+    display: flex;
+    align-self: start;
+    border-width: 20px;
+}
+
+.qtySelctor ul {
+    padding: 10px;
+}
+
+.cartList {
+    overflow: auto;
+}
+
+.cartList::-webkit-scrollbar{
+    width: 2;
+}
+
+.itemInfo {
+    align-items: center;
+    margin-top: 20px;
+    max-height: 200px;
+    justify-items: center;
+}
+
+.image {
+    margin: 20px;
+}
+
+.totalPrice {
+    margin: 20px;
+    margin-left: 250px;
+    margin-top: 100px;
+}
+
+.cartList hr {
+    margin: 0;
+}
+
+.chkBtn button {
+    width: 500px;
+    height: 55px;
+    display: auto;
+    cursor: pointer;
+    margin-bottom: 20px;
+    background-color: rgb(24, 24, 24);
+  }
+
+.chkBtn .chkText {
+    margin-left: 5px;
+    margin-top: 10px;
+    font-family: Montserrat;
+    font-size: 25px;
+    color: rgb(231, 231, 231);
+}
+
+.chkBtn .separator {
+    margin-left: 35px;
+    margin-top: 10px;
+    font-family: Montserrat;
+    font-size: 25px;
+    color: rgb(231, 231, 231);
+}
+
+.chkBtn .price {
+    margin-left: 40px;
+    margin-top: 10px;
+    font-family: Montserrat;
+    font-size: 25px;
+    color: rgb(231, 231, 231);
+}
+
+.chkBtn {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 25px;
+  }
+  
+
+.cartFooter {
+    background-color: rgb(231, 231, 231);
+    padding: 0;
+
+
+}
+
+.cartFooter hr {
+    margin-top: 0px;
+   border-color: rgb(48, 48, 48);
+   opacity: 20%;
+  }
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1800px;
+    height: 500px;
+    justify-content:flex-start;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 50px;
+    padding: 0px;
+}
+
+.galI {
+    max-width: auto;
+    max-height: auto;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+.product{
+    border-radius: 0.4rem;
+    overflow: hidden;
+    transition: box-shadow 250ms ease-out;
+    position: relative;
+}
+
+.product-img img{
+    width: 100%;
+}
+
+.product-img .rear-img{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: opacity 250ms ease-out;
+}
+
+.product:hover .rear-img{
+    opacity: 1;
+    z-index: 0;
+    cursor: pointer;
+}
+  
+  .img-area {
+    position: relative;
+    height: 300px;
+    width: 400px;
+    margin: 10% auto 0;
+  }
+  
+  .img-area img {
+    position: absolute;
+    left: 0;
+    height: 300px;
+    width: 400px;
+    transition: opacity 300ms ease-in-out;
+  }
+  
+  .img-area img.img-front:hover {
+    opacity: 0;
+    cursor: pointer;
+  }
+
+p {
+    font-weight: 430;
+    font-family: Montserrat;
+    font-style: bold;
+}
+
+p1 {
+    color: rgb(75, 75, 75);
+    font-family: Montserrat;
+    letter-spacing: 4px;
+    font-size: 23px;
+}
+
+h4 {
+    font-family: Montserrat;
+    font-style: bold;
+}
+
+h4:hover {
+    cursor: pointer;
+}
+
+h2 {
+    font-family: Montserrat;
+}
+
+.grid1_4 {
+    padding-bottom: 40px;
+}
+
+.grid2_4 {
+    padding-left: 40px;
+    padding-bottom: 40px;
+}
+
+.grid3_4 {
+    padding-left: 40px;
+    padding-bottom: 40px;
+}
+
+.grid4_4 {
+    padding-left: 40px;
+    padding-bottom: 40px;
+}
+
+.categoryext {
+    margin-left: 45px;
+    font-family: Montserrat;
+}
+
+t {
+    max-width: 400px;
+    max-height: 600px;
+}
+
+a1 {
+    text-decoration: none;
+}
+
+a1:hover {
+    background-color: yellowgreen;
+    
+}
+
+a {
+  text-decoration: none;
+  color: rgb(34, 34, 34);
+}
