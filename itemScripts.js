@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Adjust to product Id Section
 
     const addDataToHTML = () => {
-      console.log('Adding HTML for items...');
+      console.log('Adds html of items');
       ListProductsHTML.innerHTML = '';
       if (ListProducts.length > 0){
         ListProducts.forEach(product => {
@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </div>
         `;
+          console.log("finished adding item to cart.");
           ListProductsHTML.appendChild(newProduct);
         })
       }
@@ -109,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Add to Cart HTML Section
 
     const addCartToHTML = () => {
-      console.log('Adding HTML for items...');
+      console.log('adds items to cart');
       ListCartHTML.innerHTML = '';
       calculateTotalAmount();
       if (carts.length > 0) {
@@ -142,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
               </div>
             `;
-            console.log('Finished adding html.');
+            console.log('Finished adding to cart.');
             ListCartHTML.appendChild(newCart);
           }
         });
