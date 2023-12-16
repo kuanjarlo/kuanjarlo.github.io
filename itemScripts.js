@@ -108,6 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Add to Cart HTML Section
 
     const addCartToHTML = () => {
+      console.log('Adding HTML for items...');
       ListCartHTML.innerHTML = '';
       calculateTotalAmount();
       if (carts.length > 0) {
