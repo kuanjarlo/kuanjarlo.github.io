@@ -1,0 +1,60 @@
+[
+    {
+        "id": 1,
+        "name": "oten",
+        "price": 200,
+        "image": "hoodie.webp"
+    },
+
+    {
+        "id": 4,
+        "name": "DICKS",
+        "price": 200,
+        "image": "hoodie.webp"
+    },
+
+    {
+        "id": 3,
+        "name": "DICKS",
+        "price": 200,
+        "image": "hoodie.webp"
+    },
+
+    {
+        "id": 4,
+        "name": "DICKS",
+        "price": 200,
+        "image": "hoodie.webp"
+    },
+
+    {
+        "id": 5,
+        "name": "DICKS",
+        "price": 200,
+        "image": "hoodie.webp"
+    },
+
+    {
+        "id": 6,
+        "name": "DICKS",
+        "price": 200,
+        "image": "hoodie.webp"
+    },
+
+    {
+        "id": 7,
+        "name": "DICKS",
+        "price": 200,
+        "image": "hoodie.webp"
+    },
+
+    {
+        "id": 8,
+        "name": "DICKS",
+        "price": 200,
+        "image": "hoodie.webp"
+    }
+
+    
+
+]
