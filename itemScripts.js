@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Adjust to product Id Section
 
     const addDataToHTML = () => {
+      console.log('Adding HTML for items...');
       ListProductsHTML.innerHTML = '';
       if (ListProducts.length > 0){
         ListProducts.forEach(product => {
@@ -141,6 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
               </div>
             `;
+            console.log('Finished adding html.');
             ListCartHTML.appendChild(newCart);
           }
         });
