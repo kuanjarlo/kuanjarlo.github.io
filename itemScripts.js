@@ -721,6 +721,3 @@ const handleQuantityChange = (cartIndex, action) => {
   }
   addCartToHTML(); // Update the cart HTML after changing the quantity
 };
-
-// Call the addCartToHTML function
-addCartToHTML();
